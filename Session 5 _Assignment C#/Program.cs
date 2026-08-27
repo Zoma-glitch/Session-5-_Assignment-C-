@@ -6,7 +6,7 @@ namespace Session_5__Assignment_C_
     {
         static void Main(string[] args)
         {
-            Book book = new Book();
+            //Book book = new Book();
 
             //book.Title = "Clean Code";
 
@@ -16,9 +16,16 @@ namespace Session_5__Assignment_C_
 
             //Console.WriteLine(book.Title);
 
-            book.Genre = Genre.Science;
+            //book.Genre = Genre.Science;
 
-            Console.WriteLine(book.Genre);
+            //Console.WriteLine(book.Genre);
+
+
+            Console.WriteLine((int)Genre.Fiction);
+
+            Console.WriteLine((int)Genre.NonFiction);
+
+            Console.WriteLine((int)Genre.Science);
         }
 
         #region Question01
@@ -63,6 +70,30 @@ namespace Session_5__Assignment_C_
         #region Question04
         //4-Declare an enum Genre { Fiction, NonFiction, Science }. Add a Genre property to Book, assign it Genre.Science, and print it.
 
+        //enum Genre
+        //{
+        //    Fiction,
+        //    NonFiction,
+        //    Science
+        //}
+        //class Book
+        //{
+        //    private string Password = "Secret";
+
+        //    internal int copiesInStock = 5;
+
+        //    public string Title;
+
+        //    public Genre Genre;
+
+        //public Genre Genre { get; set; }
+
+        //}
+        #endregion
+
+
+        #region Question05
+        //5-Using the Genre enum above, print the underlying int value of Genre.Fiction, Genre.NonFiction, and Genre.Science by casting each to int. 
         enum Genre
         {
             Fiction,
@@ -77,8 +108,13 @@ namespace Session_5__Assignment_C_
 
             public string Title;
 
-            public Genre Genre;
+            //public Genre Genre;
+
+            public Genre Genre { get; set; }
+
         }
+
+
         #endregion
-}
-}
+    }
+    }
