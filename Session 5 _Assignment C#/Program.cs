@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using Microsoft.VisualBasic;
+using System.Drawing;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Session_5__Assignment_C_
@@ -35,11 +36,11 @@ namespace Session_5__Assignment_C_
             //Console.WriteLine((int)Genre.Science);
 
 
-            string genreText = "Science";
+            //string genreText = "Science";
 
-            Genre genre = (Genre)Enum.Parse(typeof(Genre), genreText);
+            //Genre genre = (Genre)Enum.Parse(typeof(Genre), genreText);
 
-            Console.WriteLine(genre);
+            //Console.WriteLine(genre);
 
             #region Question07
             //7- Given Genre genre = Genre.Fiction;, convert it into a string using ToString() and print it.
@@ -50,6 +51,17 @@ namespace Session_5__Assignment_C_
             //Console.WriteLine(genreString);
             #endregion
 
+            #region Question09
+            string genretext = "Mystery";
+            if(Enum.TryParse(genretext , out Genre genre))
+            {
+                Console.WriteLine(genre);
+            }
+            else
+            {
+                Console.WriteLine("Unknown genre");
+            }
+            #endregion
         }
 
         #region Question01
@@ -160,13 +172,23 @@ namespace Session_5__Assignment_C_
 
         #region Question08
         //8-Given string genreText = "Science";, convert it into a Genre value using Enum.Parse() and print the result.
-        enum Genre
-        {
-            Fiction,
-            NonFiction,
-            Science
-        }
+        //enum Genre
+        //{
+        //    Fiction,
+        //    NonFiction,
+        //    Science
+        //}
         #endregion
 
+        #region Question09
+        //9-Given string genreText = "Mystery"; (not a valid Genre value), use Enum.TryParse() to attempt the conversion.Print "Unknown genre" if it fails.
+
+        //enum Genre
+        //{
+        //    Fiction,
+        //    NonFiction,
+        //    Science
+        //}
+        #endregion
     }
 }
