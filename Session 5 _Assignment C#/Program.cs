@@ -34,13 +34,20 @@ namespace Session_5__Assignment_C_
 
             //Console.WriteLine((int)Genre.Science);
 
+
+            string genreText = "Science";
+
+            Genre genre = (Genre)Enum.Parse(typeof(Genre), genreText);
+
+            Console.WriteLine(genre);
+
             #region Question07
             //7- Given Genre genre = Genre.Fiction;, convert it into a string using ToString() and print it.
-            Genre genre = Genre.Fiction;
+            //Genre genre = Genre.Fiction;
 
-            string genreString = genre.ToString();
+            //string genreString = genre.ToString();
 
-            Console.WriteLine(genreString);
+            //Console.WriteLine(genreString);
             #endregion
 
         }
@@ -140,15 +147,26 @@ namespace Session_5__Assignment_C_
 
         //int genreNumber = 1;
 
+        //enum Genre
+        //{
+        //    Fiction,
+        //    NonFiction,
+        //    Science
+
+        //}
+
+
+        #endregion
+
+        #region Question08
+        //8-Given string genreText = "Science";, convert it into a Genre value using Enum.Parse() and print the result.
         enum Genre
         {
             Fiction,
             NonFiction,
             Science
-
         }
-
-
         #endregion
+
     }
 }
