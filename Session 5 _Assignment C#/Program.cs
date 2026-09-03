@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Session_5__Assignment_C_
 {
@@ -6,11 +7,11 @@ namespace Session_5__Assignment_C_
     {
         static void Main(string[] args)
         {
-            int genreNumber = 1;
+            //int genreNumber = 1;
 
-            Genre genre = (Genre)genreNumber;
+            //Genre genre = (Genre)genreNumber;
 
-            Console.WriteLine(genre);
+            //Console.WriteLine(genre);
 
             //Book book = new Book();
 
@@ -32,6 +33,16 @@ namespace Session_5__Assignment_C_
             //Console.WriteLine((int)Genre.NonFiction);
 
             //Console.WriteLine((int)Genre.Science);
+
+            #region Question07
+            //7- Given Genre genre = Genre.Fiction;, convert it into a string using ToString() and print it.
+            Genre genre = Genre.Fiction;
+
+            string genreString = genre.ToString();
+
+            Console.WriteLine(genreString);
+            #endregion
+
         }
 
         #region Question01
